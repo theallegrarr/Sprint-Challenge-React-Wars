@@ -44,7 +44,7 @@ Props is the name given to objects passed to react components and they contain a
 
 - [x] What are side effects, and how do you sync effects in a React component to state or prop changes?
 
-Side effects can be seen as anything that leads to a change that can be observed when a function is completed, besides the return value of the function
+Side effects can be seen as anything that leads to a change that can be observed when a function is completed, besides the return value of the function, it can be synced by using the react useEffect feature
 
 ## Project Set Up
 

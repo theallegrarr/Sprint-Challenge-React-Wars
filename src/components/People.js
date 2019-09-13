@@ -1,13 +1,17 @@
 import React, { useState, useEffect } from 'react';
-// step 1: bring axios!
 import axios from 'axios';
-import { StyledCard } from './styledCard';
-
+import { staticData } from './statPeople';
+import { StyledCard } from '../styles/styledCard';
+import { ContentDiv } from '../styles/styledCard';
+import { ButtonsArea } from '../styles/styledCard';
 
 function GetPeople(props) {
   
     const [people, setPeople] = useState({});
-    const peopleLink = `https://swapi.co/api/people/`;
+    const [page, setPage] = useState({ count: 0 });
+
+    const currentPage = page.count === 0 ? '' : `?page=${page.count}`;
+    const peopleLink = `https://swapi.co/api/people/${currentPage}`;
   
     //const peopleList = data[0].data.results.map((d) => <StyledCard key={d.name}>{d.name}</StyledCard>);
     let peopleList = '';
@@ -21,7 +25,7 @@ function GetPeople(props) {
 
           if(people.data)console.log(people.data[0].data.results);
         })
-    }, [people])
+    }, [people, page])
   
     if(people.data)peopleList = people.data[0].data.results.map((d) => 
       <StyledCard key={d.name}>
@@ -30,11 +34,22 @@ function GetPeople(props) {
         <p>Height: {d.height}</p>
       </StyledCard>);
 
+    // peopleList = staticData.results.map((d) => 
+    //   <StyledCard key={d.name}>
+    //     <h3>Name: {d.name}</h3>
+    //     <h4>Birth Year: {d.birth_year}</h4>
+    //     <p>Height: {d.height}</p>
+    //   </StyledCard>);
+
     return (
       <>
-          {
-            peopleList
-          }
+        <ContentDiv>
+          {peopleList}
+        </ContentDiv>
+        <ButtonsArea>
+          <button onClick={() => setPage({ count: page.count-1 })}>PREVIOUS</button>
+          <button onClick={() => setPage({ count: page.count+1 })}>NEXT</button>
+        </ButtonsArea>
       </>
     );
   }

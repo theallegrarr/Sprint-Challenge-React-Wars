@@ -24,36 +24,48 @@ In this challenge, create a web page that presents a styled list of Star Wars ch
 
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
-- [ ] What is React JS and what problems does it try and solve? Support your answer with concepts introduced in class and from your personal research on the web.
+- [x] What is React JS and what problems does it try and solve? Support your answer with concepts introduced in class and from your personal research on the web.
 
-- [ ] What does it mean to _think_ in react?
+React is a JavaScript library used for frontend development. It renders an application as a component or a collection of components and manages them with states
 
-- [ ] Describe state.
+In large web projects with lots of DOM operations, It would take some time for a page to be loaded, updated and refreshed, but react uses a virtual DOM to optimize this problem. It keeps all data from first load in a virtual DOM and when actions are taken on the application, it will only update the component that was affected, this means that all other components do not have to be loaded every time the application changes and considerably increases the speed of the application 
 
-- [ ] Describe props.
+- [x] What does it mean to _think_ in react?
 
-- [ ] What are side effects, and how do you sync effects in a React component to state or prop changes?
+This would mean seeing different parts of the application as components that need to be rendered and updated
+
+- [x] Describe state.
+
+A state is the present condition of a react component at any time
+
+- [x] Describe props.
+
+Props is the name given to objects passed to react components and they contain arguments/parameters to be used by the component
+
+- [x] What are side effects, and how do you sync effects in a React component to state or prop changes?
+
+Side effects can be seen as anything that leads to a change that can be observed when a function is completed, besides the return value of the function
 
 ## Project Set Up
 
 Follow these steps to set up and work on your project:
 
-- [ ] Create a forked copy of this project.
-- [ ] Add TL as collaborator on Github.
-- [ ] Clone your OWN version of Repo. **(Not Lambda's by mistake!)**
-- [ ] Create a new Branch locally: `git checkout -b <firstName-lastName>`.
-- [ ] Change directories into `./starwars` (`cd starwars`) and run `yarn install` or `npm install` to retrieve all needed dependencies.
-- [ ] Once you have installed the _node_modules_, run `yarn start` or `npm start` to get your server up and running.
-- [ ] With the server up and running, open Chrome and head over to `localhost:3000` and view your beautiful app. Maybe it's not _that_ pretty... _yet_, your goal is to ensure this project becomes a thing of beauty.
+- [x] Create a forked copy of this project.
+- [x] Add TL as collaborator on Github.
+- [x] Clone your OWN version of Repo. **(Not Lambda's by mistake!)**
+- [x] Create a new Branch locally: `git checkout -b <firstName-lastName>`.
+- [x] Change directories into `./starwars` (`cd starwars`) and run `yarn install` or `npm install` to retrieve all needed dependencies.
+- [x] Once you have installed the _node_modules_, run `yarn start` or `npm start` to get your server up and running.
+- [x] With the server up and running, open Chrome and head over to `localhost:3000` and view your beautiful app. Maybe it's not _that_ pretty... _yet_, your goal is to ensure this project becomes a thing of beauty.
 Follow these steps for completing your project.
-- [ ] Implement the project on this Branch, **committing progress & changes often.**
-- [ ] Push commits: `git push origin <firstName-lastName>`.
+- [x] Implement the project on this Branch, **committing progress & changes often.**
+- [x] Push commits: `git push origin <firstName-lastName>`.
 
 Follow these steps for completing your project:
 
-- [ ] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's  Repo).
-- [ ] Add your Project Manager as a Reviewer on the Pull-request.
-- [ ] PM then will count the HW as done by merging the branch back into master.
+- [x] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's  Repo).
+- [x] Add your Project Manager as a Reviewer on the Pull-request.
+- [x] PM then will count the HW as done by merging the branch back into master.
 
 
 ## Minimum Viable Product
